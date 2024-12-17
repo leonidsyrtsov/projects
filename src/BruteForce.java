@@ -28,7 +28,7 @@ public class BruteForce {
             Map<Integer, Integer> englishKeyMatchScores = new HashMap<>();
             Map<Integer, Integer> ukrainianKeyMatchScores = new HashMap<>();
 
-            for (int englishKey = 1; englishKey <= ALPHABET.getENGLISH_ALPHABET().length; englishKey++) {
+            for (int englishKey = 1; englishKey <= ALPHABET.getEnglishAlphabet().length; englishKey++) {
                 int score = 0;
                 for (String line : lines) {
                     String decryptedText = CAESAR.decrypt(line.toCharArray(), englishKey);
@@ -36,7 +36,7 @@ public class BruteForce {
                 }
                 englishKeyMatchScores.put(englishKey, score);
             }
-            for (int ukrainianKey = 1; ukrainianKey <= ALPHABET.getUKRAINIAN_ALPHABET().length; ukrainianKey++) {
+            for (int ukrainianKey = 1; ukrainianKey <= ALPHABET.getUkrainianAlphabet().length; ukrainianKey++) {
                 int score = 0;
                 for (String line : lines) {
                     String decryptedText = CAESAR.decrypt(line.toCharArray(), ukrainianKey);

@@ -15,10 +15,10 @@ public class CaesarCipher {
 
     public String encrypt(char[] chars, int key) {
         for (int i = 0; i < chars.length; i++) {
-            if (isCharInAlphabet(chars[i], ALPHABET.getENGLISH_ALPHABET())) {
-                chars[i] = shiftEncrypt(chars[i], ALPHABET.getENGLISH_ALPHABET(), key);
-            } else if (isCharInAlphabet(chars[i], ALPHABET.getUKRAINIAN_ALPHABET())) {
-                chars[i] = shiftEncrypt(chars[i], ALPHABET.getUKRAINIAN_ALPHABET(), key);
+            if (isCharInAlphabet(chars[i], ALPHABET.getEnglishAlphabet())) {
+                chars[i] = shiftEncrypt(chars[i], ALPHABET.getEnglishAlphabet(), key);
+            } else if (isCharInAlphabet(chars[i], ALPHABET.getUkrainianAlphabet())) {
+                chars[i] = shiftEncrypt(chars[i], ALPHABET.getUkrainianAlphabet(), key);
             } else if (isCharInAlphabet(chars[i], ALPHABET.getMARKS())) {
                 chars[i] = shiftEncrypt(chars[i], ALPHABET.getMARKS(), key);
             }
@@ -28,10 +28,10 @@ public class CaesarCipher {
 
     public String decrypt(char[] chars, int key) {
         for (int i = 0; i < chars.length; i++) {
-            if (isCharInAlphabet(chars[i], ALPHABET.getENGLISH_ALPHABET())) {
-                chars[i] = shiftDecrypt(chars[i], ALPHABET.getENGLISH_ALPHABET(), key);
-            } else if (isCharInAlphabet(chars[i], ALPHABET.getUKRAINIAN_ALPHABET())) {
-                chars[i] = shiftDecrypt(chars[i], ALPHABET.getUKRAINIAN_ALPHABET(), key);
+            if (isCharInAlphabet(chars[i], ALPHABET.getEnglishAlphabet())) {
+                chars[i] = shiftDecrypt(chars[i], ALPHABET.getEnglishAlphabet(), key);
+            } else if (isCharInAlphabet(chars[i], ALPHABET.getUkrainianAlphabet())) {
+                chars[i] = shiftDecrypt(chars[i], ALPHABET.getUkrainianAlphabet(), key);
             } else if (isCharInAlphabet(chars[i], ALPHABET.getMARKS())) {
                 chars[i] = shiftDecrypt(chars[i], ALPHABET.getMARKS(), key);
             }
